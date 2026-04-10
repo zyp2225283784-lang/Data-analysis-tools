@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>公司经营分析看板（Demo）</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>上市公司经营分析看板（Demo）</h1>
+      <div class="company-select">
+        <label for="company">公司：</label>
+        <select id="company"></select>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="kpi-grid" id="kpi-grid"></section>
+
+      <section class="chart-grid">
+        <article class="card">
+          <h2>营收 vs 净利润（亿元）</h2>
+          <canvas id="revProfitChart"></canvas>
+        </article>
+        <article class="card">
+          <h2>毛利率 / ROE 趋势（%）</h2>
+          <canvas id="marginRoeChart"></canvas>
+        </article>
+        <article class="card">
+          <h2>经营现金流（亿元）</h2>
+          <canvas id="cashflowChart"></canvas>
+        </article>
+        <article class="card">
+          <h2>综合能力雷达图</h2>
+          <canvas id="radarChart"></canvas>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
